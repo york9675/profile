@@ -38,8 +38,6 @@ body {
   flex-direction: column;
 }
 
-/* Removed: .no-js .js-only (unused) */
-
 .skip-link {
   position: absolute;
   left: -999px;
@@ -179,12 +177,42 @@ a:hover {
   line-height: 1.45;
 }
 
+/* Email styling */
+.contact-email {
+  margin: 0.35rem 0 0.4rem;
+}
+.email-link {
+  font-size: 0.7rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 0.25rem 0 0.2rem;
+  border-bottom: 1px solid transparent;
+  transition: opacity var(--transition), border-color var(--transition), color var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.email-link .icon {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  font-size: 0.8rem;
+}
+.email-link:hover,
+.email-link:focus {
+  opacity: 1;
+  border-color: var(--line-alt);
+}
+
 .meta-lines {
   display: flex;
   flex-wrap: wrap;
   gap: 1.4rem;
   padding: 0.8rem 0;
-  /* Removed top/bottom borders as requested */
 }
 
 .clock-line {
@@ -335,8 +363,6 @@ a:hover {
   margin-top: 0.4rem;
 }
 
-/* Removed: .org-points (unused) */
-
 .btn-plain {
   background: none;
   border: 1px solid var(--line-alt);
@@ -380,7 +406,7 @@ a:hover {
 
 #scroll-top {
   width: 100%;
-  justify-content: center; /* Center text inside button */
+  justify-content: center;
 }
 
 .site-footer {
@@ -404,14 +430,7 @@ a:hover {
   text-align: right;
 }
 
-/* Removed: .nav related rules (unused) */
-
-/* Active nav highlighting (unused nav removed, keeping for safety could be dropped)
-.nav a.active { color: var(--fg-soft); } */
-
-/* Removed: pre, code (unused right now) */
-
-/* Utilities / Accessibility */
+/* Accessibility & selection */
 :focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
